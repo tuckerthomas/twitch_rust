@@ -1,0 +1,30 @@
+[package]
+name = "twitch_rust"
+version = "0.1.0"
+authors = ["tuckerthomas <tuckerthomas@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+futures = "0.3"
+futures-util = "0.3"
+futures-channel = "0.3"
+# Http client and server
+reqwest = { version = "0.10", features = ["json"] }
+warp = "0.2"
+url = "2"
+# Lower level networking
+tokio = { version = "0.2", features = ["full"] }
+# Websockets
+tungstenite = { version = "*", features = ["tls"] }
+tokio-tungstenite = { version = "*", features = ["tls"] }
+# Logging
+env_logger = "0.7"
+# Parsing/Json support
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+# Opening browsers
+open = "1"
+# IRC Message Parcing
+nom = "5"

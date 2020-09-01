@@ -31,7 +31,7 @@ async fn main() {
 
     pin_mut!(stdin_to_ws, ws_to_stdout);
 
-    stdin_tx.unbounded_send(Message::text("PASS oauth:qijc787vqh6xprmbbluoaievc39yla")).unwrap();
+    stdin_tx.unbounded_send(Message::text("PASS oauth:<INSERT OAUTH>")).unwrap();
     stdin_tx.unbounded_send(Message::text("NICK iMarluxia")).unwrap();
     stdin_tx.unbounded_send(Message::text("JOIN #ludwig")).unwrap();
     future::select(stdin_to_ws, ws_to_stdout).await;
